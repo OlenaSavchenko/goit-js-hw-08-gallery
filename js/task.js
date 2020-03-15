@@ -36,9 +36,10 @@ function createGalleryItem(items) {
   galleryItem.append(galleryLink);
   return galleryItem;
 }
+
 function appendGalleryItem() {
-  const gallery = items.map(item => createGalleryItem(item));
-  refs.galleryList.append(...gallery);
+  const galleryItemsCollection = items.map(item => createGalleryItem(item));
+  refs.galleryList.append(...galleryItemsCollection);
 }
 appendGalleryItem();
 
