@@ -61,13 +61,13 @@ function setLargeImage(index) {
 function onOpenModal(index) {
   setLargeImage(index);
   refs.lightBox.classList.add('is-open');
-  window.addEventListener('keydown', onPressKey);
+  window.addEventListener('keydown', onPressKeyboard);
 }
 
 function onCloseModal() {
-  refs.lightBox.classList.remove('is-open');
   refs.largeImage.src = '';
-  window.removeEventListener('keydown', onPressKey);
+  refs.lightBox.classList.remove('is-open');
+    window.removeEventListener('keydown', onPressKeyboard);
 }
 
 function onBackDropClick(event) {
@@ -76,7 +76,7 @@ function onBackDropClick(event) {
   }
 }
 
-function onPressKey(event) {
+function onPressKeyboard(event) {
   if (event.code === 'Escape') {
     onCloseModal();
   } else if (event.code === 'ArrowLeft') {
@@ -88,7 +88,6 @@ function onPressKey(event) {
 
 function createIndex() {
   const galleryImages = document.querySelectorAll('.gallery__image');
-
   galleryImages.forEach((element, index) => (element.dataset.index = index));
   galleryLength = galleryImages.length;
 }
