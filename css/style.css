@@ -137,3 +137,31 @@ body {
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.arrow__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 105px;
+  height: 105px;
+  cursor: pointer;
+  border: 0 solid;
+  outline: none;
+  transform: scale(0.9);
+  background-color: transparent;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+.arrow__button:hover,
+.arrow__button:focus {
+  transform: scale(1);
+}
+.arrow__btn-prev {
+  left: 0;
+  background-image: url('../images/undo.svg');
+}
+.arrow__btn-next {
+  right: 0;
+  background-image: url('../images/redo.svg');
+}
